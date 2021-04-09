@@ -1,0 +1,11 @@
+type Query {
+  """
+  Shortens the given url and returns the short url
+  """
+  shortenUrl(
+    """
+    A valid url to be shortened
+    """
+    url: String!
+  ): String!
+}
