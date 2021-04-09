@@ -14,6 +14,7 @@ const typeDefs = gql(fs.readFileSync('src/schema.graphql').toString());
 const graphqlServer = new ApolloServer({
   typeDefs,
   resolvers,
+  introspection: true,
 });
 graphqlServer.applyMiddleware({ app });
 
